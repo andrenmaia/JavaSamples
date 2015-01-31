@@ -7,6 +7,6 @@
 
     <bean id="helloWorld" class="com.company.app.HelloWorld">
         <property name="message" value="Hello World from Beans.xml" />
-
     </bean>
+
 </beans>

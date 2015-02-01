@@ -17,5 +17,6 @@ public class App
 
         TextEditor textEditor = (TextEditor)context.getBean("textEditor");
         textEditor.spellCheck();
+        textEditor.applySpecialEffect();
     }
 }

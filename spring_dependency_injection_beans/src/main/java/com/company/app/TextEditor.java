@@ -5,6 +5,7 @@ package com.company.app;
  */
 public class TextEditor {
     private SpellChecker spellChecker;
+    private SpecialEffect specialEffect;
 
     public TextEditor(SpellChecker spellChecker){
         this.spellChecker = spellChecker;
@@ -13,5 +14,18 @@ public class TextEditor {
 
     public void spellCheck(){
         this.spellChecker.checkSpelling();
+    }
+
+    public SpecialEffect getSpecialEffect() {
+        return specialEffect;
+    }
+
+    public void setSpecialEffect(SpecialEffect specialEffect) {
+        System.out.println("Setting SpecialEffect in TextEditor");
+        this.specialEffect = specialEffect;
+    }
+
+    public void applySpecialEffect() {
+        this.specialEffect.doSomethingNice();
     }
 }

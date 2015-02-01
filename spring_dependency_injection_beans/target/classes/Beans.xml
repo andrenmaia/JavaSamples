@@ -7,7 +7,11 @@
 
     <bean id="textEditor" class="com.company.app.TextEditor">
         <constructor-arg ref="spellChecker" />
+        <property name="specialEffect" ref="specialEffect" />
     </bean>
 
     <bean id="spellChecker" class="com.company.app.SpellChecker" />
+
+    <bean id="specialEffect" class="com.company.app.SpecialEffect" />
+    
 </beans>

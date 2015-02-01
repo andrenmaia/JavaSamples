@@ -1,6 +1,7 @@
 package com.company.app;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -11,7 +12,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 
         HelloWorld helloWorld = (HelloWorld)context.getBean("helloWorld");
         HelloWorld helloWorld2 = (HelloWorld)context.getBean("helloWorld");
@@ -27,5 +28,7 @@ public class App
         System.out.println("From helloWorld:" + helloWorld.getMessage());
         System.out.println("From helloWorld2:" + helloWorld2.getMessage());
         System.out.println("Is singleton:" + helloWorld.getMessage().equals(helloWorld2.getMessage()));
+
+        context.registerShutdownHook();
     }
 }

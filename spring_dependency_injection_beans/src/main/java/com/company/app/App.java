@@ -4,6 +4,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.xml.soap.Text;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * Hello world!
@@ -18,5 +21,6 @@ public class App
         TextEditor textEditor = (TextEditor)context.getBean("textEditor");
         textEditor.spellCheck();
         textEditor.applySpecialEffect();
+
     }
 }
